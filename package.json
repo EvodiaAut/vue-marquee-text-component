@@ -1,0 +1,67 @@
+{
+  "name": "vue-marquee-text-component",
+  "version": "1.0.0",
+  "description": "[CSS GPU Animation] Marquee Text for vuejs",
+  "author": "EvodiaAut <evodia.aut@gmail.com>",
+  "main": "dist/MarqueeText.common.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvodiaAut/vue-marquee-text-component.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue2",
+    "vuejs2",
+    "vue-component",
+    "component",
+    "javascript",
+    "marqueetext"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EvodiaAut/vue-marquee-text-component/issues"
+  },
+  "homepage": "https://github.com/EvodiaAut/vue-marquee-text-component",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name MarqueeText src/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/recommended",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
