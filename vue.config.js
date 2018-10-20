@@ -3,6 +3,13 @@ module.exports = {
     ? '/vue-marquee-text-component/'
     : '/',
   css: {
-    extract: false
+    extract: false,
+    loaderOptions: {
+      css: {
+        getLocalIdent: (context, localIdentName, localName) => {
+          return 'marquee-text-' + localName
+        }
+      }
+    }
   }
 }
