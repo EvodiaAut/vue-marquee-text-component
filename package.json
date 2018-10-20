@@ -28,7 +28,8 @@
   "homepage": "https://github.com/EvodiaAut/vue-marquee-text-component",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name MarqueeText src/index.js",
+    "docs": "vue-cli-service build --dest docs",
+    "build": "vue-cli-service build --dest dist --target lib --name MarqueeText src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
