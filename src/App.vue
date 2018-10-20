@@ -1,69 +1,66 @@
 <template>
-  <div
-    id="app"
-    class="container my-5"
-  >
-    <header class="pb-5 border-bottom">
-      <ul
-        class="nav float-right"
-      >
-        <li
-          class="nav-item"
+  <div id="app">
+    <div class="bg-light py-5">
+      <header class="container">
+        <ul
+          class="nav float-right"
         >
+          <li>
+            <a
+              class="btn btn-primary btn-sm"
+              href="https://github.com/EvodiaAut/vue-marquee-text-component"
+              target="_blank"
+            >
+              Github
+            </a>
+          </li>
+        </ul>
+        <h1>vue-marquee-text-component</h1>
+        <p class="lead">
+          [<a
+            href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/"
+            target="_blank">CSS GPU Animation</a>]
+            Marquee Text for vuejs
+        </p>
+        <div class="d-flex flex-wrap">
           <a
-            class="btn btn-primary nav-link"
-            href="https://github.com/EvodiaAut/vue-marquee-text-component"
+            href="https://www.npmjs.com/package/vue-marquee-text-component"
             target="_blank"
           >
-            Github
+            <img
+              class="m-1"
+              src="https://img.shields.io/npm/v/vue-marquee-text-component.svg?style=for-the-badge"
+              alt="vue-marquee-text-component npm"
+            >
           </a>
-        </li>
-      </ul>
-      <h1>vue-marquee-text-component</h1>
-      <p class="lead">
-        [<a
-          href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/"
-          target="_blank">CSS GPU Animation</a>]
-          Marquee Text for vuejs
-      </p>
-      <div class="d-flex flex-wrap">
-        <a
-          href="https://www.npmjs.com/package/vue-marquee-text-component"
-          target="_blank"
-        >
-          <img
-            class="m-1"
-            src="https://img.shields.io/npm/v/vue-marquee-text-component.svg?style=for-the-badge"
-            alt="vue-marquee-text-component npm"
+          <a
+            href="https://github.com/EvodiaAut/vue-marquee-text-component/blob/master/LICENSE.md"
+            target="_blank"
           >
-        </a>
-        <a
-          href="https://github.com/EvodiaAut/vue-marquee-text-component/blob/master/LICENSE.md"
-          target="_blank"
-        >
-          <img
-            class="m-1"
-            src="https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge"
-            alt="vue-marquee-text-component license"
+            <img
+              class="m-1"
+              src="https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge"
+              alt="vue-marquee-text-component license"
+            >
+          </a>
+          <a
+            href="https://www.npmjs.com/package/vue-marquee-text-component"
+            target="_blank"
           >
-        </a>
-        <a
-          href="https://www.npmjs.com/package/vue-marquee-text-component"
-          target="_blank"
-        >
-          <img
-            class="m-1"
-            src="https://img.shields.io/npm/dt/vue-marquee-text-component.svg?style=for-the-badge"
-            alt="vue-marquee-text-component npm"
-          >
-        </a>
-      </div>
-    </header>
+            <img
+              class="m-1"
+              src="https://img.shields.io/npm/dt/vue-marquee-text-component.svg?style=for-the-badge"
+              alt="vue-marquee-text-component npm"
+            >
+          </a>
+        </div>
+      </header>
+    </div>
     <main
-      class="my-5"
+      class="container"
       role="main"
     >
-      <section class="my-5">
+      <section class="my-4">
         <h2 class="mb-3">Props</h2>
         <div class="table-responsive">
           <table class="table table-sm">
@@ -89,23 +86,41 @@
           </table>
         </div>
       </section>
-      <section class="my-5">
+      <section class="my-4">
         <h3 class="mb-3">Demo</h3>
         <marquee-text
-          :duration="30"
-          class="my-3"
+          :duration="45"
+          class="py-2 bg-dark text-white"
         >
-          <span class="badge badge-success">START</span>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.
-          <span class="badge badge-danger">END</span>
+          <span class="badge badge-success ml-2">0,38%</span> ATX
+          <span class="badge badge-danger ml-2">0,16%</span> DAX
+          <span class="badge badge-success ml-2">0,04%</span> TecDax
+          <span class="badge badge-danger ml-2">0,19%</span> MDAX
+          <span class="badge badge-success ml-2">0,03%</span> ESTX50
+          <span class="badge badge-info ml-2">0,00%</span> NIKKEI
+          <span class="badge badge-success ml-2">0,03%</span> EUR/CHF
         </marquee-text>
-        <code>use prop repeat when you know the content is not wider that parent</code>
+        <div class="text-right font-italic small">TEST DATA</div>
+        <marquee-text
+          :duration="20"
+          class="py-2 mt-2 bg-light"
+        >
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </marquee-text>
+        <marquee-text class="py-2 mt-2">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </marquee-text>
+      </section>
+      <section class="my-4">
+        <h4 class="mb-3">To small content</h4>
+        <p class="font-weight-bold mb-0">use prop <code>{ :repeat="NUMBER" }</code> when you know the content is not wider than parent</p>
+        <p class="font-italic">Default we clone default slot two times</p>
         <marquee-text>
           <span class="badge badge-success">START</span>
           Short text =(
           <span class="badge badge-danger">END</span>
         </marquee-text>
-        <code>{ :repeat="6" }</code>
+        <code class="font-weight-bold">{ :repeat="6" }</code>
         <marquee-text
           :repeat="6"
         >
@@ -132,11 +147,7 @@
 <style>
   @import'~bootstrap/dist/css/bootstrap.css';
 
-  body {
-    background-color: #f8f9fa;
-  }
-
-  code {
+  table code {
     white-space: nowrap;
   }
 </style>
