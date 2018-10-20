@@ -88,8 +88,10 @@
       </section>
       <section class="my-4">
         <h3 class="mb-3">Demo</h3>
+        <div class="text-right font-italic small">TEST DATA</div>
         <marquee-text
           :duration="45"
+          :repeat="3"
           class="py-2 bg-dark text-white"
         >
           <span class="badge badge-success ml-2">0,38%</span> ATX
@@ -100,14 +102,29 @@
           <span class="badge badge-info ml-2">0,00%</span> NIKKEI
           <span class="badge badge-success ml-2">0,03%</span> EUR/CHF
         </marquee-text>
-        <div class="text-right font-italic small">TEST DATA</div>
+        <marquee-text
+          :duration="3"
+          :repeat="3"
+          class="py-2 bg-dark text-white mt-2"
+        >
+          <span class="badge badge-success ml-2">0,38%</span> ATX
+          <span class="badge badge-danger ml-2">0,16%</span> DAX
+          <span class="badge badge-success ml-2">0,04%</span> TecDax
+          <span class="badge badge-danger ml-2">0,19%</span> MDAX
+          <span class="badge badge-success ml-2">0,03%</span> ESTX50
+          <span class="badge badge-info ml-2">0,00%</span> NIKKEI
+          <span class="badge badge-success ml-2">0,03%</span> EUR/CHF
+        </marquee-text>
         <marquee-text
           :duration="20"
           class="py-2 mt-2 bg-light"
         >
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
         </marquee-text>
-        <marquee-text class="py-2 mt-2">
+        <marquee-text
+          :duration="10"
+          class="py-2 mt-2"
+        >
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
         </marquee-text>
       </section>
@@ -115,14 +132,15 @@
         <h4 class="mb-3">To small content</h4>
         <p class="font-weight-bold mb-0">use prop <code>{ :repeat="NUMBER" }</code> when you know the content is not wider than parent</p>
         <p class="font-italic">Default we clone default slot two times</p>
-        <marquee-text>
+        <marquee-text :duration="1">
           <span class="badge badge-success">START</span>
           Short text =(
           <span class="badge badge-danger">END</span>
         </marquee-text>
-        <code class="font-weight-bold">{ :repeat="6" }</code>
+        after add prop <code class="font-weight-bold">{ :repeat="10" }</code>
         <marquee-text
-          :repeat="6"
+          :duration="1"
+          :repeat="10"
         >
           <span class="badge badge-success">START</span>
           Short text =(
