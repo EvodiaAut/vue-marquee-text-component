@@ -4,6 +4,8 @@
   "description": "[CSS GPU Animation] Marquee Text for vuejs",
   "author": "EvodiaAut <evodia.aut@gmail.com>",
   "main": "dist/MarqueeText.common.js",
+  "unpkg": "dist/MarqueeText.umd.min.js",
+  "module": "dist/MarqueeText.common.js",
   "directories": {
     "doc": "docs"
   },
