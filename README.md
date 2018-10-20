@@ -62,7 +62,7 @@ On your page you can now use html like this:
 ## Props
 
 |Prop|Type|Default|Description
-|-|-|-|-|-|
+|-|-|-|-|
 |duration|Number|15|Animation Duration
 |repeat|Number|2|Number of repeat the Slot (It's important for to short content)
 
