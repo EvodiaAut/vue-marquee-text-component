@@ -31,7 +31,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "docs": "vue-cli-service build --dest docs",
-    "build": "vue-cli-service build --dest dist --target lib --name MarqueeText src/index.js",
+    "build": "vue-cli-service build --dest dist --target lib --name MarqueeText src/components/MarqueeText.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
