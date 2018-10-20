@@ -1,8 +1,17 @@
 <meta charset="utf-8">
 <title>MarqueeText demo</title>
+<script src="https://unpkg.com/vue"></script>
 <script src="./MarqueeText.umd.js"></script>
 <link rel="stylesheet" href="./MarqueeText.css">
 
+<div id="app">
+  <demo></demo>
+</div>
+
 <script>
-console.log(MarqueeText)
+new Vue({
+  components: {
+    demo: MarqueeText
+  }
+}).$mount('#app')
 </script>

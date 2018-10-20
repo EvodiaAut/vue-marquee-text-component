@@ -970,14 +970,14 @@ exports = module.exports = __webpack_require__("2350")(false);
 
 
 // module
-exports.push([module.i, "\n.MarqueeText_wrap_vzO0u{overflow:hidden\n}\n.MarqueeText_content_2lYRn{width:100000px\n}\n.MarqueeText_text_372yS{-webkit-animation-name:MarqueeText_marquee_3_fAi;animation-name:MarqueeText_marquee_3_fAi;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;float:left\n}\n@-webkit-keyframes MarqueeText_marquee_3_fAi{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}\n@keyframes MarqueeText_marquee_3_fAi{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}", ""]);
+exports.push([module.i, "\n.marquee-text-wrap{overflow:hidden\n}\n.marquee-text-content{width:100000px\n}\n.marquee-text-text{-webkit-animation-name:marquee-text-marquee;animation-name:marquee-text-marquee;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;float:left\n}\n@-webkit-keyframes marquee-text-marquee{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}\n@keyframes marquee-text-marquee{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}", ""]);
 
 // exports
 exports.locals = {
-	"wrap": "MarqueeText_wrap_vzO0u",
-	"content": "MarqueeText_content_2lYRn",
-	"text": "MarqueeText_text_372yS",
-	"marquee": "MarqueeText_marquee_3_fAi"
+	"wrap": "marquee-text-wrap",
+	"content": "marquee-text-content",
+	"text": "marquee-text-text",
+	"marquee": "marquee-text-marquee"
 };
 
 /***/ }),
@@ -1604,13 +1604,10 @@ var component = normalizeComponent(
 
 component.options.__file = "MarqueeText.vue"
 /* harmony default export */ var MarqueeText = (component.exports);
-// CONCATENATED MODULE: ./src/index.js
-
-/* harmony default export */ var src = (MarqueeText);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (MarqueeText);
 
 
 
@@ -1625,6 +1622,6 @@ module.exports = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u20
 
 /***/ })
 
-/******/ });
+/******/ })["default"];
 });
 //# sourceMappingURL=MarqueeText.umd.js.map
