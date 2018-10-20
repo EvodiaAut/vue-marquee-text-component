@@ -47,13 +47,13 @@
   }
 
   .text {
-    animation-name: marquee;
+    animation-name: animation;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     float: left;
   }
 
-  @keyframes marquee {
+  @keyframes animation {
     0% { transform:translateX(0); }
     100% { transform:translateX(-100%); }
   }
