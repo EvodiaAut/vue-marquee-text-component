@@ -961,14 +961,14 @@ exports = module.exports = __webpack_require__("2350")(false);
 
 
 // module
-exports.push([module.i, "\n.marquee-text-wrap{overflow:hidden\n}\n.marquee-text-content{width:100000px\n}\n.marquee-text-text{-webkit-animation-name:marquee-text-marquee;animation-name:marquee-text-marquee;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;float:left\n}\n@-webkit-keyframes marquee-text-marquee{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}\n@keyframes marquee-text-marquee{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}", ""]);
+exports.push([module.i, "\n.marquee-text-wrap{overflow:hidden\n}\n.marquee-text-content{width:100000px\n}\n.marquee-text-text{-webkit-animation-name:marquee-text-animation;animation-name:marquee-text-animation;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;float:left\n}\n@-webkit-keyframes marquee-text-animation{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}\n@keyframes marquee-text-animation{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}", ""]);
 
 // exports
 exports.locals = {
 	"wrap": "marquee-text-wrap",
 	"content": "marquee-text-content",
 	"text": "marquee-text-text",
-	"marquee": "marquee-text-marquee"
+	"animation": "marquee-text-animation"
 };
 
 /***/ }),
