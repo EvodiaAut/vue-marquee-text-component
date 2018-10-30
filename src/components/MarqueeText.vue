@@ -13,9 +13,13 @@
         validator: function (val) {
           return val >= 2
         }
+      },
+      paused: {
+        type: Boolean,
+        default: false
       }
     },
-    render(h, { $style, props: { duration, repeat }, children, data: { staticClass } }) {
+    render(h, { $style, props: { duration, repeat, paused }, children, data: { staticClass } }) {
       const text = h('div', {
         class: $style.text,
         style: {
@@ -30,7 +34,12 @@
         ]
       }, [
         h('div', {
-          class: $style.content
+          class: [
+            paused
+              ? $style.paused
+              : undefined,
+            $style.content
+          ]
         }, Array(repeat).fill(text))
       ])
     }
@@ -51,6 +60,10 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     float: left;
+  }
+
+  .paused .text {
+    animation-play-state: paused
   }
 
   @keyframes animation {

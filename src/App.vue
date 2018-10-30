@@ -82,16 +82,32 @@
                 <td>Number of repeat the Slot <b>(It's important for to short content)</b></td>
                 <td><code>{ type: Number, default: 2 }</code></td>
               </tr>
+              <tr>
+                <th scope="row">paused</th>
+                <td>The property specifies whether the animation is running or paused</td>
+                <td><code>{ type: Boolean, default: false }</code></td>
+              </tr>
             </tbody>
           </table>
         </div>
       </section>
       <section class="my-4">
-        <h3 class="mb-3">Demo</h3>
+        <h3 class="mb-3">
+          Demo
+          <button
+            :class="{ 'active': isPaused }"
+            class="btn btn-sm btn-outline-primary"
+            type="button"
+            @click="isPaused = !isPaused"
+          >
+            Pause
+          </button>
+        </h3>
         <div class="text-right font-italic small">TEST DATA</div>
         <marquee-text
           :duration="45"
           :repeat="3"
+          :paused="isPaused"
           class="py-2 bg-dark text-white"
         >
           <span class="badge badge-success ml-2">0,38%</span> ATX
@@ -105,6 +121,7 @@
         <marquee-text
           :duration="3"
           :repeat="3"
+          :paused="isPaused"
           class="py-2 bg-dark text-white mt-2"
         >
           <span class="badge badge-success ml-2">0,38%</span> ATX
@@ -117,12 +134,14 @@
         </marquee-text>
         <marquee-text
           :duration="20"
+          :paused="isPaused"
           class="py-2 mt-2 bg-light"
         >
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
         </marquee-text>
         <marquee-text
           :duration="10"
+          :paused="isPaused"
           class="py-2 mt-2"
         >
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -158,6 +177,11 @@
     name: 'App',
     components: {
       MarqueeText
+    },
+    data() {
+      return {
+        isPaused: false
+      }
     }
   }
 </script>

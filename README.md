@@ -65,6 +65,7 @@ On your page you can now use html like this:
 |-|-|-|-|
 |duration|Number|15|Animation Duration
 |repeat|Number|2|Number of repeat the Slot (It's important for to short content)
+|paused|Boolean|false|The property specifies whether the animation is running or paused
 
 ## Build Setup
 
