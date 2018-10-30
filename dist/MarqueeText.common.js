@@ -961,14 +961,15 @@ exports = module.exports = __webpack_require__("2350")(false);
 
 
 // module
-exports.push([module.i, "\n.marquee-text-wrap{overflow:hidden\n}\n.marquee-text-content{width:100000px\n}\n.marquee-text-text{-webkit-animation-name:marquee-text-animation;animation-name:marquee-text-animation;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;float:left\n}\n@-webkit-keyframes marquee-text-animation{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}\n@keyframes marquee-text-animation{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}", ""]);
+exports.push([module.i, "\n.marquee-text-wrap{overflow:hidden\n}\n.marquee-text-content{width:100000px\n}\n.marquee-text-text{-webkit-animation-name:marquee-text-animation;animation-name:marquee-text-animation;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;float:left\n}\n.marquee-text-paused .marquee-text-text{-webkit-animation-play-state:paused;animation-play-state:paused\n}\n@-webkit-keyframes marquee-text-animation{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}\n@keyframes marquee-text-animation{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}", ""]);
 
 // exports
 exports.locals = {
 	"wrap": "marquee-text-wrap",
 	"content": "marquee-text-content",
 	"text": "marquee-text-text",
-	"animation": "marquee-text-animation"
+	"animation": "marquee-text-animation",
+	"paused": "marquee-text-paused"
 };
 
 /***/ }),
@@ -1443,6 +1444,10 @@ var es6_number_constructor = __webpack_require__("c5f6");
       validator: function validator(val) {
         return val >= 2;
       }
+    },
+    paused: {
+      type: Boolean,
+      default: false
     }
   },
   render: function render(h, _ref) {
@@ -1450,6 +1455,7 @@ var es6_number_constructor = __webpack_require__("c5f6");
         _ref$props = _ref.props,
         duration = _ref$props.duration,
         repeat = _ref$props.repeat,
+        paused = _ref$props.paused,
         children = _ref.children,
         staticClass = _ref.data.staticClass;
     var text = h('div', {
@@ -1461,7 +1467,7 @@ var es6_number_constructor = __webpack_require__("c5f6");
     return h('div', {
       class: [staticClass, $style.wrap]
     }, [h('div', {
-      class: $style.content
+      class: [paused ? $style.paused : undefined, $style.content]
     }, Array(repeat).fill(text))]);
   }
 });
