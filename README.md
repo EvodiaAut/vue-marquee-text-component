@@ -67,6 +67,15 @@ On your page you can now use html like this:
 |repeat|Number|2|Number of repeat the Slot (It's important for to short content)
 |paused|Boolean|false|The property specifies whether the animation is running or paused
 
+## Important information for dynamic content
+If you change the content you need reload the component. For this use property `:key` [see more](https://vuejs.org/v2/api/#key)
+```html
+<!-- parse a unique key for reload the component  -->
+<marquee-text :key="currentTrack.id">
+  {{ currentTrack.title }}
+</marquee-text>
+```
+
 ## Build Setup
 
 ``` bash
