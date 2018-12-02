@@ -19,7 +19,7 @@
         default: false
       }
     },
-    render(h, { $style, props: { duration, repeat, paused }, children, data: { staticClass } }) {
+    render(h, { $style, props: { duration, repeat, paused }, children, data: { staticClass, key } }) {
       const text = h('div', {
         class: $style.text,
         style: {
@@ -28,6 +28,7 @@
       }, children)
 
       return h('div', {
+        key,
         class: [
           staticClass,
           $style.wrap
