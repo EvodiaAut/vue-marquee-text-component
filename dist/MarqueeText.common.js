@@ -1457,7 +1457,9 @@ var es6_number_constructor = __webpack_require__("c5f6");
         repeat = _ref$props.repeat,
         paused = _ref$props.paused,
         children = _ref.children,
-        staticClass = _ref.data.staticClass;
+        _ref$data = _ref.data,
+        staticClass = _ref$data.staticClass,
+        key = _ref$data.key;
     var text = h('div', {
       class: $style.text,
       style: {
@@ -1465,6 +1467,7 @@ var es6_number_constructor = __webpack_require__("c5f6");
       }
     }, children);
     return h('div', {
+      key: key,
       class: [staticClass, $style.wrap]
     }, [h('div', {
       class: [paused ? $style.paused : undefined, $style.content]
