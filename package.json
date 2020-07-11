@@ -1,6 +1,6 @@
 {
-  "name": "vue-marquee-text-component",
-  "version": "1.1.1",
+  "name": "vue-marquee-box",
+  "version": "1.0.0",
   "description": "[CSS GPU Animation] Marquee Text for vuejs",
   "author": "EvodiaAut <evodia.aut@gmail.com>",
   "main": "dist/MarqueeText.common.js",
