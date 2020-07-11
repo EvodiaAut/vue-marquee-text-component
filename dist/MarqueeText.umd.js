@@ -970,13 +970,15 @@ exports = module.exports = __webpack_require__("2350")(false);
 
 
 // module
-exports.push([module.i, "\n.marquee-text-wrap{overflow:hidden\n}\n.marquee-text-content{width:100000px\n}\n.marquee-text-text{-webkit-animation-name:marquee-text-animation;animation-name:marquee-text-animation;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;float:left\n}\n.marquee-text-paused .marquee-text-text{-webkit-animation-play-state:paused;animation-play-state:paused\n}\n@-webkit-keyframes marquee-text-animation{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}\n@keyframes marquee-text-animation{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}", ""]);
+exports.push([module.i, "\n.marquee-text-wrap{overflow:hidden\n}\n.marquee-text-content{width:100000px\n}\n.marquee-text-vertucal.marquee-text-content{height:100000px;width:0\n}\n.marquee-text-vertucal .marquee-text-text{-webkit-animation-name:marquee-text-animationvertucal;animation-name:marquee-text-animationvertucal\n}\n.marquee-text-text{-webkit-animation-name:marquee-text-animation;animation-name:marquee-text-animation;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;float:left\n}\n.marquee-text-paused .marquee-text-text{-webkit-animation-play-state:paused;animation-play-state:paused\n}\n@-webkit-keyframes marquee-text-animation{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}\n@keyframes marquee-text-animation{\n0%{-webkit-transform:translateX(0);transform:translateX(0)\n}\nto{-webkit-transform:translateX(-100%);transform:translateX(-100%)\n}\n}\n@-webkit-keyframes marquee-text-animationvertucal{\n0%{-webkit-transform:translateY(0);transform:translateY(0)\n}\nto{-webkit-transform:translateY(-100%);transform:translateY(-100%)\n}\n}\n@keyframes marquee-text-animationvertucal{\n0%{-webkit-transform:translateY(0);transform:translateY(0)\n}\nto{-webkit-transform:translateY(-100%);transform:translateY(-100%)\n}\n}", ""]);
 
 // exports
 exports.locals = {
 	"wrap": "marquee-text-wrap",
 	"content": "marquee-text-content",
+	"vertucal": "marquee-text-vertucal",
 	"text": "marquee-text-text",
+	"animationvertucal": "marquee-text-animationvertucal",
 	"animation": "marquee-text-animation",
 	"paused": "marquee-text-paused"
 };
@@ -1457,6 +1459,10 @@ var es6_number_constructor = __webpack_require__("c5f6");
     paused: {
       type: Boolean,
       default: false
+    },
+    direction: {
+      type: String,
+      default: ''
     }
   },
   render: function render(h, _ref) {
@@ -1465,10 +1471,12 @@ var es6_number_constructor = __webpack_require__("c5f6");
         duration = _ref$props.duration,
         repeat = _ref$props.repeat,
         paused = _ref$props.paused,
+        direction = _ref$props.direction,
         children = _ref.children,
         _ref$data = _ref.data,
         staticClass = _ref$data.staticClass,
         key = _ref$data.key;
+    // console.log(h, $style, duration, repeat, paused, children, staticClass, key);
     var text = h('div', {
       class: $style.text,
       style: {
@@ -1479,7 +1487,7 @@ var es6_number_constructor = __webpack_require__("c5f6");
       key: key,
       class: [staticClass, $style.wrap]
     }, [h('div', {
-      class: [paused ? $style.paused : undefined, $style.content]
+      class: [paused ? $style.paused : undefined, $style.content, direction === 'vertucal' ? $style.vertucal : undefined]
     }, Array(repeat).fill(text))]);
   }
 });

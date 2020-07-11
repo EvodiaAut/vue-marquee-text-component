@@ -66,6 +66,7 @@ On your page you can now use html like this:
 |duration|Number|15|Animation Duration
 |repeat|Number|2|Number of repeat the Slot (It's important for to short content)
 |paused|Boolean|false|The property specifies whether the animation is running or paused
+|direction|String|''|Set 'vertucal', scroll vertically
 
 ## Important information for dynamic content
 If you change the content you need reload the component. For this use property `:key` [see more](https://vuejs.org/v2/api/#key)

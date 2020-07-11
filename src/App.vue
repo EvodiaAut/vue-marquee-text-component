@@ -87,6 +87,11 @@
                 <td>The property specifies whether the animation is running or paused</td>
                 <td><code>{ type: Boolean, default: false }</code></td>
               </tr>
+              <tr>
+                <th scope="row">direction</th>
+                <td>Set 'vertucal', scroll vertically</td>
+                <td><code>{ type: String, default: '' }</code></td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -165,6 +170,17 @@
           Short text =(
           <span class="badge badge-danger">END</span>
         </marquee-text>
+        direction vertical <code class="font-weight-bold">{ :direction='vertical' }</code>
+        <marquee-text
+                :duration="1"
+                :repeat="20"
+                :direction="'vertucal'"
+                class="vertucal-test"
+        >
+          <span class="badge badge-success">START</span>
+          Short text =(
+          <span class="badge badge-danger">END</span>
+        </marquee-text>
       </section>
     </main>
   </div>
@@ -172,7 +188,6 @@
 
 <script>
   import MarqueeText from './components/MarqueeText.vue'
-
   export default {
     name: 'App',
     components: {
@@ -188,8 +203,14 @@
 
 <style>
   @import'~bootstrap/dist/css/bootstrap.css';
-
   table code {
     white-space: nowrap;
+  }
+  .vertucal-test{
+    width: 200px;
+    height: 500px;
+  }
+  .vertucal-test .marquee-text-text{
+    width: 200px;
   }
 </style>
