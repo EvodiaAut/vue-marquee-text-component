@@ -102,6 +102,13 @@
                 <td>The property specifies whether the animation is running or paused</td>
                 <td><code>{ type: Boolean, default: false }</code></td>
               </tr>
+              <tr>
+                <th scope="row">
+                  reverse
+                </th>
+                <td>The animation plays backwards each cycle</td>
+                <td><code>{ type: Boolean, default: false }</code></td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -149,6 +156,7 @@
         <marquee-text
           :duration="20"
           :paused="isPaused"
+          reverse
           class="py-2 mt-2 bg-light"
         >
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
