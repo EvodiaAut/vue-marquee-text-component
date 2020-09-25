@@ -17,13 +17,18 @@
       paused: {
         type: Boolean,
         default: false
+      },
+      reverse: {
+        type: Boolean,
+        default: false
       }
     },
-    render(h, { $style, props: { duration, repeat, paused }, children, data: { staticClass, key, on } }) {
+    render(h, { $style, props: { duration, repeat, paused, reverse }, children, data: { staticClass, key, on } }) {
       const text = h('div', {
         class: $style.text,
         style: {
-          animationDuration: `${duration}s`
+          animationDuration: `${duration}s`,
+          animationDirection: reverse ? 'reverse' : undefined
         }
       }, children)
 
