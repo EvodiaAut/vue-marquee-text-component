@@ -108,19 +108,16 @@
       </section>
       <section class="my-4">
         <h3 class="mb-3">
-          Demo
+          Demo <small>with test data</small>
           <button
             :class="{ 'active': isPaused }"
-            class="btn btn-sm btn-outline-primary"
+            class="btn btn-sm btn-outline-primary ml-2"
             type="button"
             @click="isPaused = !isPaused"
           >
             Pause
           </button>
         </h3>
-        <div class="text-right font-italic small">
-          TEST DATA
-        </div>
         <marquee-text
           :duration="45"
           :repeat="3"
@@ -156,12 +153,25 @@
         >
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
         </marquee-text>
+      </section>
+      <section class="my-4">
+        <h4 class="mb-3">
+          Listening to Events: Example - Stop on mouse hover
+        </h4>
         <marquee-text
-          :duration="10"
+          :repeat="3"
           :paused="isPaused"
-          class="py-2 mt-2"
+          class="py-2 bg-dark text-white mt-2"
+          @mouseenter="isPaused = !isPaused"
+          @mouseleave="isPaused = false"
         >
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+          <span class="badge badge-success ml-2">0,38%</span> ATX
+          <span class="badge badge-danger ml-2">0,16%</span> DAX
+          <span class="badge badge-success ml-2">0,04%</span> TecDax
+          <span class="badge badge-danger ml-2">0,19%</span> MDAX
+          <span class="badge badge-success ml-2">0,03%</span> ESTX50
+          <span class="badge badge-info ml-2">0,00%</span> NIKKEI
+          <span class="badge badge-success ml-2">0,03%</span> EUR/CHF
         </marquee-text>
       </section>
       <section class="my-4">
