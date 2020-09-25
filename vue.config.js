@@ -1,13 +1,14 @@
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production'
+  publicPath: process.env.NODE_ENV === 'production'
     ? '/vue-marquee-text-component/'
     : '/',
   css: {
     extract: false,
+    requireModuleExtension: false,
     loaderOptions: {
       css: {
-        getLocalIdent: (context, localIdentName, localName) => {
-          return 'marquee-text-' + localName
+        modules: {
+          localIdentName: 'marquee-text-[local]'
         }
       }
     }

@@ -19,8 +19,9 @@
         <p class="lead">
           [<a
             href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/"
-            target="_blank">CSS GPU Animation</a>]
-            Marquee Text for vuejs
+            target="_blank"
+          >CSS GPU Animation</a>]
+          Marquee Text for vuejs
         </p>
         <div class="d-flex flex-wrap">
           <a
@@ -61,29 +62,43 @@
       role="main"
     >
       <section class="my-4">
-        <h2 class="mb-3">Props</h2>
+        <h2 class="mb-3">
+          Props
+        </h2>
         <div class="table-responsive">
           <table class="table table-sm">
             <thead>
               <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Config</th>
+                <th scope="col">
+                  Name
+                </th>
+                <th scope="col">
+                  Description
+                </th>
+                <th scope="col">
+                  Config
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">duration</th>
+                <th scope="row">
+                  duration
+                </th>
                 <td>Animation Duration</td>
                 <td><code>{ type: Number, default: 15 }</code></td>
               </tr>
               <tr>
-                <th scope="row">repeat</th>
+                <th scope="row">
+                  repeat
+                </th>
                 <td>Number of repeat the Slot <b>(It's important for to short content)</b></td>
                 <td><code>{ type: Number, default: 2 }</code></td>
               </tr>
               <tr>
-                <th scope="row">paused</th>
+                <th scope="row">
+                  paused
+                </th>
                 <td>The property specifies whether the animation is running or paused</td>
                 <td><code>{ type: Boolean, default: false }</code></td>
               </tr>
@@ -103,7 +118,9 @@
             Pause
           </button>
         </h3>
-        <div class="text-right font-italic small">TEST DATA</div>
+        <div class="text-right font-italic small">
+          TEST DATA
+        </div>
         <marquee-text
           :duration="45"
           :repeat="3"
@@ -148,9 +165,15 @@
         </marquee-text>
       </section>
       <section class="my-4">
-        <h4 class="mb-3">To small content</h4>
-        <p class="font-weight-bold mb-0">use prop <code>{ :repeat="NUMBER" }</code> when you know the content is not wider than parent</p>
-        <p class="font-italic">Default we clone default slot two times</p>
+        <h4 class="mb-3">
+          To small content
+        </h4>
+        <p class="font-weight-bold mb-0">
+          use prop <code>{ :repeat="NUMBER" }</code> when you know the content is not wider than parent
+        </p>
+        <p class="font-italic">
+          Default we clone default slot two times
+        </p>
         <marquee-text :duration="1">
           <span class="badge badge-success">START</span>
           Short text =(
