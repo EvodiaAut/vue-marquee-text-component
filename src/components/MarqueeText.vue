@@ -19,7 +19,7 @@
         default: false
       }
     },
-    render(h, { $style, props: { duration, repeat, paused }, children, data: { staticClass, key } }) {
+    render(h, { $style, props: { duration, repeat, paused }, children, data: { staticClass, key, on } }) {
       const text = h('div', {
         class: $style.text,
         style: {
@@ -29,6 +29,7 @@
 
       return h('div', {
         key,
+        on,
         class: [
           staticClass,
           $style.wrap
