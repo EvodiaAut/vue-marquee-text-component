@@ -11,7 +11,7 @@
         type: Number,
         default: 2,
         validator: function (val) {
-          return val >= 2
+          return val > 0
         }
       },
       paused: {
