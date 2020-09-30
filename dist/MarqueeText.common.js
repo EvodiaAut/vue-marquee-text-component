@@ -1996,10 +1996,14 @@ var es_string_repeat = __webpack_require__("38cf");
       type: Number,
       default: 2,
       validator: function validator(val) {
-        return val >= 2;
+        return val > 0;
       }
     },
     paused: {
+      type: Boolean,
+      default: false
+    },
+    reverse: {
       type: Boolean,
       default: false
     }
@@ -2010,18 +2014,22 @@ var es_string_repeat = __webpack_require__("38cf");
         duration = _ref$props.duration,
         repeat = _ref$props.repeat,
         paused = _ref$props.paused,
+        reverse = _ref$props.reverse,
         children = _ref.children,
         _ref$data = _ref.data,
         staticClass = _ref$data.staticClass,
-        key = _ref$data.key;
+        key = _ref$data.key,
+        on = _ref$data.on;
     var text = h('div', {
       class: $style.text,
       style: {
-        animationDuration: "".concat(duration, "s")
+        animationDuration: "".concat(duration, "s"),
+        animationDirection: reverse ? 'reverse' : undefined
       }
     }, children);
     return h('div', {
       key: key,
+      on: on,
       class: [staticClass, $style.wrap]
     }, [h('div', {
       class: [paused ? $style.paused : undefined, $style.content]
