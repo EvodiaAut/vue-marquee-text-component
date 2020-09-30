@@ -11,24 +11,30 @@
         type: Number,
         default: 2,
         validator: function (val) {
-          return val >= 2
+          return val > 0
         }
       },
       paused: {
         type: Boolean,
         default: false
+      },
+      reverse: {
+        type: Boolean,
+        default: false
       }
     },
-    render(h, { $style, props: { duration, repeat, paused }, children, data: { staticClass, key } }) {
+    render(h, { $style, props: { duration, repeat, paused, reverse }, children, data: { staticClass, key, on } }) {
       const text = h('div', {
         class: $style.text,
         style: {
-          animationDuration: `${duration}s`
+          animationDuration: `${duration}s`,
+          animationDirection: reverse ? 'reverse' : undefined
         }
       }, children)
 
       return h('div', {
         key,
+        on,
         class: [
           staticClass,
           $style.wrap
