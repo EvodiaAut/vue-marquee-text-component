@@ -1,34 +1,56 @@
 <script>
-import { h, useCssModule } from 'vue'
+import { h } from 'vue'
 
-const MarqueText = ((({
-  duration = 15, repeat = 2, paused = false, reverse = false
-}, { slots }) => {
-  const $style = useCssModule()
-
-  return h('div', { class: [$style.wrap] }, [
-    h('div', {
-      class: [
-        paused
-          ? $style.paused
-          : undefined,
-        $style.content
-      ]
-    }, Array(repeat).fill(
+export default {
+  name: 'MarqueeText',
+  props: {
+    duration: {
+      type: Number,
+      default: 15
+    },
+    repeat: {
+      type: Number,
+      default: 2,
+      validator(val) {
+        return val > 0
+      }
+    },
+    paused: {
+      type: Boolean,
+      default: false
+    },
+    reverse: {
+      type: Boolean,
+      default: false
+    }
+  },
+  render({
+    $slots, $style, $props: {
+      duration, repeat, paused, reverse
+    }
+  }) {
+    return h('div', { class: [$style.wrap] }, [
       h('div', {
-        class: $style.text,
-        style: {
-          animationDuration: `${duration}s`,
-          animationDirection: reverse !== false
-            ? 'reverse'
-            : undefined
-        }
-      }, slots)
-    ))
-  ])
-}))
-
-export default MarqueText
+        class: [
+          paused
+            ? $style.paused
+            : undefined,
+          $style.content
+        ]
+      }, Array(repeat).fill(
+        h('div', {
+          class: $style.text,
+          style: {
+            animationDuration: `${duration}s`,
+            animationDirection: reverse
+              ? 'reverse'
+              : undefined
+          }
+        }, $slots.default())
+      ))
+    ])
+  }
+}
 </script>
 
 <style module>
