@@ -1,11 +1,11 @@
-import {Component} from "vue";
+import { Component } from 'vue';
 
-interface MarqueTextProps {
+interface MarqueeTextProps {
   duration?: number;
   repeat?: number;
   paused?: boolean;
   reverse?: boolean;
 }
 
-declare const MarqueComponent: Component<MarqueTextProps>;
-export default MarqueComponent;
+declare const MarqueeText: Component<MarqueeTextProps>;
+export default MarqueeText;
