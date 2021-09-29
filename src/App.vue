@@ -125,7 +125,7 @@
             Pause
           </button>
         </h3>
-        <marquee-text
+        <MarqueeText
           :duration="45"
           :repeat="3"
           :paused="isPaused"
@@ -138,8 +138,8 @@
           <span class="badge badge-success ml-2">0,03%</span> ESTX50
           <span class="badge badge-info ml-2">0,00%</span> NIKKEI
           <span class="badge badge-success ml-2">0,03%</span> EUR/CHF
-        </marquee-text>
-        <marquee-text
+        </MarqueeText>
+        <MarqueeText
           :duration="3"
           :repeat="3"
           :paused="isPaused"
@@ -152,21 +152,22 @@
           <span class="badge badge-success ml-2">0,03%</span> ESTX50
           <span class="badge badge-info ml-2">0,00%</span> NIKKEI
           <span class="badge badge-success ml-2">0,03%</span> EUR/CHF
-        </marquee-text>
-        <marquee-text
+        </MarqueeText>
+        <MarqueeText
           :duration="20"
           :paused="isPaused"
           reverse
           class="py-2 mt-2 bg-light"
         >
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-        </marquee-text>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+          ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </MarqueeText>
       </section>
       <section class="my-4">
         <h4 class="mb-3">
           Listening to Events: Example - Stop on mouse hover
         </h4>
-        <marquee-text
+        <MarqueeText
           :repeat="3"
           :paused="isPaused"
           class="py-2 bg-dark text-white mt-2"
@@ -180,7 +181,7 @@
           <span class="badge badge-success ml-2">0,03%</span> ESTX50
           <span class="badge badge-info ml-2">0,00%</span> NIKKEI
           <span class="badge badge-success ml-2">0,03%</span> EUR/CHF
-        </marquee-text>
+        </MarqueeText>
       </section>
       <section class="my-4">
         <h4 class="mb-3">
@@ -192,39 +193,40 @@
         <p class="font-italic">
           Default we clone default slot two times
         </p>
-        <marquee-text :duration="1">
+        <MarqueeText :duration="1">
           <span class="badge badge-success">START</span>
           Short text =(
           <span class="badge badge-danger">END</span>
-        </marquee-text>
+        </MarqueeText>
         after add prop <code class="font-weight-bold">{ :repeat="10" }</code>
-        <marquee-text
+        <MarqueeText
           :duration="1"
           :repeat="10"
         >
           <span class="badge badge-success">START</span>
           Short text =(
           <span class="badge badge-danger">END</span>
-        </marquee-text>
+        </MarqueeText>
       </section>
     </main>
   </div>
 </template>
 
 <script>
-  import MarqueeText from './components/MarqueeText.vue'
+import { defineComponent, ref } from 'vue'
+import MarqueeText from './components/MarqueeText.vue'
 
-  export default {
-    name: 'App',
-    components: {
-      MarqueeText
-    },
-    data() {
-      return {
-        isPaused: false
-      }
+export default defineComponent({
+  name: 'App',
+  components: {
+    MarqueeText
+  },
+  setup() {
+    return {
+      isPaused: ref(false)
     }
   }
+})
 </script>
 
 <style>
