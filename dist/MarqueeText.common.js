@@ -497,14 +497,19 @@ $({ target: 'String', proto: true }, {
 
 /***/ }),
 
-/***/ "4462":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "41ce":
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_0_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_0_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_MarqueeText_vue_vue_type_style_index_0_id_7d939f48_module_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("6274");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_0_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_0_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_MarqueeText_vue_vue_type_style_index_0_id_7d939f48_module_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_0_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_0_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_MarqueeText_vue_vue_type_style_index_0_id_7d939f48_module_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (default from non-harmony) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _node_modules_vue_style_loader_index_js_ref_6_oneOf_0_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_0_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_MarqueeText_vue_vue_type_style_index_0_id_7d939f48_module_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default.a; });
- 
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("72da");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("7ddae548", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -1031,21 +1036,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "6274":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("a4dd");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("4f82cbf3", content, true, {"sourceMap":false,"shadowMode":false});
-
-/***/ }),
-
 /***/ "69f3":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1191,6 +1181,27 @@ var TEMPLATE = String(String).split('String');
 
 /***/ }),
 
+/***/ "72da":
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".marquee-text-wrap{overflow:hidden}.marquee-text-content{width:100000px}.marquee-text-text{-webkit-animation-name:marquee-text-animation;animation-name:marquee-text-animation;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;float:left}.marquee-text-paused .marquee-text-text{-webkit-animation-play-state:paused;animation-play-state:paused}@-webkit-keyframes marquee-text-animation{0%{-webkit-transform:translateX(0);transform:translateX(0)}to{-webkit-transform:translateX(-100%);transform:translateX(-100%)}}@keyframes marquee-text-animation{0%{-webkit-transform:translateX(0);transform:translateX(0)}to{-webkit-transform:translateX(-100%);transform:translateX(-100%)}}", ""]);
+// Exports
+exports.locals = {
+	"wrap": "marquee-text-wrap",
+	"content": "marquee-text-content",
+	"text": "marquee-text-text",
+	"animation": "marquee-text-animation",
+	"paused": "marquee-text-paused"
+};
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ "7418":
 /***/ (function(module, exports) {
 
@@ -1331,6 +1342,17 @@ var WeakMap = global.WeakMap;
 
 module.exports = isCallable(WeakMap) && /native code/.test(inspectSource(WeakMap));
 
+
+/***/ }),
+
+/***/ "80e2":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_0_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_0_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_MarqueeText_vue_vue_type_style_index_0_id_53fe2600_module_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("41ce");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_0_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_0_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_MarqueeText_vue_vue_type_style_index_0_id_53fe2600_module_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_0_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_0_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_MarqueeText_vue_vue_type_style_index_0_id_53fe2600_module_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (default from non-harmony) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _node_modules_vue_style_loader_index_js_ref_6_oneOf_0_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_0_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_0_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_MarqueeText_vue_vue_type_style_index_0_id_53fe2600_module_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default.a; });
+ 
 
 /***/ }),
 
@@ -1610,27 +1632,6 @@ module.exports = function (argument) {
   var key = toPrimitive(argument, 'string');
   return isSymbol(key) ? key : String(key);
 };
-
-
-/***/ }),
-
-/***/ "a4dd":
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".marquee-text-wrap{overflow:hidden}.marquee-text-content{width:100000px}.marquee-text-text{-webkit-animation-name:marquee-text-animation;animation-name:marquee-text-animation;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;float:left}.marquee-text-paused .marquee-text-text{-webkit-animation-play-state:paused;animation-play-state:paused}@-webkit-keyframes marquee-text-animation{0%{-webkit-transform:translateX(0);transform:translateX(0)}to{-webkit-transform:translateX(-100%);transform:translateX(-100%)}}@keyframes marquee-text-animation{0%{-webkit-transform:translateX(0);transform:translateX(0)}to{-webkit-transform:translateX(-100%);transform:translateX(-100%)}}", ""]);
-// Exports
-exports.locals = {
-	"wrap": "marquee-text-wrap",
-	"content": "marquee-text-content",
-	"text": "marquee-text-text",
-	"animation": "marquee-text-animation",
-	"paused": "marquee-text-paused"
-};
-module.exports = exports;
 
 
 /***/ }),
@@ -2077,11 +2078,11 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.fill.js
-var es_array_fill = __webpack_require__("cb29");
-
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.repeat.js
 var es_string_repeat = __webpack_require__("38cf");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.fill.js
+var es_array_fill = __webpack_require__("cb29");
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
@@ -2091,45 +2092,35 @@ var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 
 
 
-var MarqueeTextvue_type_script_lang_js_MarqueText = function MarqueText(props, ctx) {
-  var _props$duration = props.duration,
-      duration = _props$duration === void 0 ? 15 : _props$duration,
-      _props$repeat = props.repeat,
-      repeat = _props$repeat === void 0 ? 2 : _props$repeat,
-      _props$paused = props.paused,
-      paused = _props$paused === void 0 ? false : _props$paused,
-      _props$reverse = props.reverse,
-      reverse = _props$reverse === void 0 ? false : _props$reverse;
-
-  if (!(repeat > 0)) {
-    console.warn("MarqueText 'repeat' value must be above 0");
-  }
-
+var MarqueeTextvue_type_script_lang_js_MarqueText = function MarqueText(_ref, _ref2) {
+  var _ref$duration = _ref.duration,
+      duration = _ref$duration === void 0 ? 15 : _ref$duration,
+      _ref$repeat = _ref.repeat,
+      repeat = _ref$repeat === void 0 ? 2 : _ref$repeat,
+      _ref$paused = _ref.paused,
+      paused = _ref$paused === void 0 ? false : _ref$paused,
+      _ref$reverse = _ref.reverse,
+      reverse = _ref$reverse === void 0 ? false : _ref$reverse;
+  var slots = _ref2.slots;
   var $style = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["useCssModule"])();
-  var inst = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["getCurrentInstance"])();
-  var key = inst.vnode.key;
-  var attrs = ctx.attrs,
-      slots = ctx.slots;
-  var text = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["h"])('div', {
+  return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["h"])('div', {
+    class: [$style.wrap]
+  }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["h"])('div', {
+    class: [paused ? $style.paused : undefined, $style.content]
+  }, Array(repeat).fill(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["h"])('div', {
     class: $style.text,
     style: {
       animationDuration: "".concat(duration, "s"),
-      animationDirection: reverse ? 'reverse' : undefined
+      animationDirection: reverse !== false ? 'reverse' : undefined
     }
-  }, slots);
-  return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["h"])('div', {
-    key: key,
-    class: [attrs.class || '', $style.wrap]
-  }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["h"])('div', {
-    class: [paused ? $style.paused : undefined, $style.content]
-  }, Array(repeat).fill(text))]);
+  }, slots)))]);
 };
 
 /* harmony default export */ var MarqueeTextvue_type_script_lang_js = (MarqueeTextvue_type_script_lang_js_MarqueText);
 // CONCATENATED MODULE: ./src/components/MarqueeText.vue?vue&type=script&lang=js
  
-// EXTERNAL MODULE: ./src/components/MarqueeText.vue?vue&type=style&index=0&id=7d939f48&module=true&lang=css
-var MarqueeTextvue_type_style_index_0_id_7d939f48_module_true_lang_css = __webpack_require__("4462");
+// EXTERNAL MODULE: ./src/components/MarqueeText.vue?vue&type=style&index=0&id=53fe2600&module=true&lang=css
+var MarqueeTextvue_type_style_index_0_id_53fe2600_module_true_lang_css = __webpack_require__("80e2");
 
 // EXTERNAL MODULE: ./node_modules/vue-loader-v16/dist/exportHelper.js
 var exportHelper = __webpack_require__("6b0d");
@@ -2141,7 +2132,7 @@ var exportHelper_default = /*#__PURE__*/__webpack_require__.n(exportHelper);
 
 const cssModules = {}
 
-cssModules["$style"] = MarqueeTextvue_type_style_index_0_id_7d939f48_module_true_lang_css["default"]
+cssModules["$style"] = MarqueeTextvue_type_style_index_0_id_53fe2600_module_true_lang_css["default"]
 
 
 const __exports__ = /*#__PURE__*/exportHelper_default()(MarqueeTextvue_type_script_lang_js, [['__cssModules',cssModules]])
