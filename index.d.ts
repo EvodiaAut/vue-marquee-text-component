@@ -1,4 +1,4 @@
-import { Component } from 'vue';
+import { DefineComponent } from 'vue';
 
 interface MarqueeTextProps {
   duration?: number;
@@ -7,5 +7,5 @@ interface MarqueeTextProps {
   reverse?: boolean;
 }
 
-declare const MarqueeText: Component<MarqueeTextProps>;
+declare const MarqueeText: DefineComponent<MarqueeTextProps>;
 export default MarqueeText;
