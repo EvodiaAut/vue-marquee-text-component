@@ -11,6 +11,7 @@
 [Demo here](https://evodiaaut.github.io/vue-marquee-text-component/)
 
 ## Install
+[Vue 3 (master)](https://github.com/EvodiaAut/vue-marquee-text-component) | [Vue 2 (v1)](https://github.com/EvodiaAut/vue-marquee-text-component/tree/v1)
 
 `npm install vue-marquee-text-component` or `yarn add vue-marquee-text-component`
 
@@ -81,7 +82,6 @@ If you change the content you need reload the component. For this use property `
 
 ``` bash
 yarn install
-
 yarn run serve
 yarn run build
 yarn run lint
